@@ -32,7 +32,11 @@ public class status_Fragment extends Fragment {
                 CurrentP = CurrentP + 10;
                 pbar.setProgress(CurrentP);
                 pbar.setMax(100);
-
+                if(CurrentP>100)
+                {
+                    CurrentP=0;
+                    pbar.setMax(0);
+                }
             }
         });
         return rootview;
