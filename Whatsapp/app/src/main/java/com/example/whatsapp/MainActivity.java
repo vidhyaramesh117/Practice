@@ -18,10 +18,10 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void run()
             {
-//                Intent intent = new Intent(MainActivity.this,);
-//                startActivity(intent);
+                Intent intent = new Intent(MainActivity.this,collapsing_toolbar.class);
+                startActivity(intent);
 
-//                finish();
+                finish();
             }
         },3000);
     }
