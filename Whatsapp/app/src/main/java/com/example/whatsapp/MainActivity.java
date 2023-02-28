@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void run()
             {
-                Intent intent = new Intent(MainActivity.this,navigation_drawer.class);
+                Intent intent = new Intent(MainActivity.this,nav_drawer.class);
                 startActivity(intent);
 
                 finish();
