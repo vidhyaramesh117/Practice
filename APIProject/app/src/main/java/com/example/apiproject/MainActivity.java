@@ -1,12 +1,8 @@
 package com.example.apiproject;
 
 import androidx.appcompat.app.AppCompatActivity;
-
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -19,7 +15,6 @@ import retrofit2.Response;
 public class MainActivity extends AppCompatActivity
 {
     ListView listView;
-    Button button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -30,21 +25,10 @@ public class MainActivity extends AppCompatActivity
         listView = findViewById(R.id.list_view);
         getSuperHeroes();
 
-        button = findViewById(R.id.post_btn);
-
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v)
-            {
-                Intent intent = new Intent(getApplication(),post_Fragment.class);
-                startActivity(intent);
-            }
-        });
 
     }
 
-    private void getSuperHeroes()
-    {
+    private void getSuperHeroes() {
         Call<List<ResultsModal>> call = RetrofitClient.getInstance().getApi().getSuperHeroes();
         call.enqueue(new Callback<List<ResultsModal>>() {
             @Override
@@ -66,5 +50,6 @@ public class MainActivity extends AppCompatActivity
         });
 
     }
+
 
 }
