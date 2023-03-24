@@ -12,7 +12,6 @@ public class MainActivity extends AppCompatActivity
 {
     Button post,update,put;
 
-    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -21,7 +20,7 @@ public class MainActivity extends AppCompatActivity
 
         post = findViewById(R.id.post_btn);
         update = findViewById(R.id.update_btn);
-        put = findViewById(R.id.update_btn);
+        put = findViewById(R.id.put_btn);
 
         post.setOnClickListener(new View.OnClickListener()
         {
@@ -36,20 +35,20 @@ public class MainActivity extends AppCompatActivity
         update.setOnClickListener(new View.OnClickListener()
         {
             @Override
-            public void onClick(View view)
+            public void onClick(View view1)
             {
-                Intent intent = new Intent(getApplicationContext(),update.class);
-                startActivity(intent);
+                Intent intent1 = new Intent(getApplicationContext(),update.class);
+                startActivity(intent1);
             }
         });
 
         put.setOnClickListener(new View.OnClickListener()
         {
             @Override
-            public void onClick(View view)
+            public void onClick(View view2)
             {
-                Intent intent = new Intent(getApplicationContext(),put.class);
-                startActivity(intent);
+                Intent intent2 = new Intent(getApplicationContext(),put.class);
+                startActivity(intent2);
             }
         });
     }

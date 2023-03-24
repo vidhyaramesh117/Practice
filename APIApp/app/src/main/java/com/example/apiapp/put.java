@@ -3,6 +3,7 @@ package com.example.apiapp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -36,11 +37,12 @@ public class put extends AppCompatActivity
         button.setOnClickListener(new View.OnClickListener()
         {
             @Override
-            public void onClick(View view)
+            public void onClick(View view2)
             {
                 if (name_et.getText().toString().isEmpty() && qualification_et.getText().toString().isEmpty())
                 {
                     Toast.makeText(getApplication(), "Enter both values", Toast.LENGTH_SHORT).show();
+                    return;
 
                 } else
                 {

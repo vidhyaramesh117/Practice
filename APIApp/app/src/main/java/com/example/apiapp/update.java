@@ -3,6 +3,7 @@ package com.example.apiapp;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.SortedList;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -24,6 +25,8 @@ public class update extends AppCompatActivity
     EditText name_et,qualification_et;
     Button button;
     TextView textView;
+
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -38,7 +41,7 @@ public class update extends AppCompatActivity
         button.setOnClickListener(new View.OnClickListener()
         {
             @Override
-            public void onClick(View v)
+            public void onClick(View view1)
             {
                 if (TextUtils.isEmpty(name_et.getText().toString()) && TextUtils.isEmpty(qualification_et.getText().toString()))
                 {
