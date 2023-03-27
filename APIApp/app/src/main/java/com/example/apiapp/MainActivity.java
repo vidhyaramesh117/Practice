@@ -20,7 +20,6 @@ public class MainActivity extends AppCompatActivity
 
         post = findViewById(R.id.post_btn);
         update = findViewById(R.id.update_btn);
-        put = findViewById(R.id.put_btn);
 
         post.setOnClickListener(new View.OnClickListener()
         {
@@ -42,14 +41,6 @@ public class MainActivity extends AppCompatActivity
             }
         });
 
-        put.setOnClickListener(new View.OnClickListener()
-        {
-            @Override
-            public void onClick(View view2)
-            {
-                Intent intent2 = new Intent(getApplicationContext(),put.class);
-                startActivity(intent2);
-            }
-        });
+
     }
 }
