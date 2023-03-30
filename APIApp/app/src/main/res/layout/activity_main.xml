@@ -12,10 +12,17 @@
         android:layout_height="wrap_content"
         android:id="@+id/post_btn"
         android:text="POST"
-        android:textSize="25dp"
+        android:textSize="15dp"
         android:layout_margin="15dp" />
 
-
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/update_btn"
+        android:text="UPDATE"
+        android:textSize="15dp"
+        android:layout_margin="15dp" />
+    
 
 
 </LinearLayout>

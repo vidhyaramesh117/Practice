@@ -2,6 +2,7 @@ package com.example.apiapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -9,7 +10,7 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity
 {
-    Button button;
+    Button post,update,put;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -17,9 +18,11 @@ public class MainActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        button = findViewById(R.id.post_btn);
+        post = findViewById(R.id.post_btn);
+        update = findViewById(R.id.update_btn);
 
-        button.setOnClickListener(new View.OnClickListener() {
+        post.setOnClickListener(new View.OnClickListener()
+        {
             @Override
             public void onClick(View view)
             {
@@ -27,5 +30,17 @@ public class MainActivity extends AppCompatActivity
                 startActivity(intent);
             }
         });
+
+        update.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View view1)
+            {
+                Intent intent1 = new Intent(getApplicationContext(),update.class);
+                startActivity(intent1);
+            }
+        });
+
+
     }
 }

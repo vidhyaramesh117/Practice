@@ -3,6 +3,7 @@ package com.example.apiapp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -26,11 +27,11 @@ public class post extends AppCompatActivity
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_post);
-
         name_et = findViewById(R.id.name);
         qualification_et = findViewById(R.id.qualification);
         button = findViewById(R.id.post_submit);
         textView = findViewById(R.id.response_tv);
+
 
         button.setOnClickListener(new View.OnClickListener()
         {
