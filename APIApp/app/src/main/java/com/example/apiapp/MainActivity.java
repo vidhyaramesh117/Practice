@@ -10,7 +10,7 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity
 {
-    Button post,update,put;
+    Button post,update,uploads;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity
 
         post = findViewById(R.id.post_btn);
         update = findViewById(R.id.update_btn);
-        put = findViewById(R.id.put_btn);
+        uploads = findViewById(R.id.uplods_btn);
 
         post.setOnClickListener(new View.OnClickListener()
         {
@@ -42,13 +42,13 @@ public class MainActivity extends AppCompatActivity
             }
         });
 
-        put.setOnClickListener(new View.OnClickListener()
+        uploads.setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View view2)
             {
-                Intent intent1 = new Intent(getApplicationContext(),put.class);
-                startActivity(intent1);
+                Intent intent2 = new Intent(getApplicationContext(),uploads.class);
+                startActivity(intent2);
             }
         });
 
