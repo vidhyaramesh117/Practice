@@ -120,15 +120,15 @@ public class uploads extends AppCompatActivity
                 real_uri = Uri.parse(getRealPathFromURI(data.getData()));
                 Log.d(TAG,"Image path : "+real_uri);
                 Log.d(TAG,"Image uploaded successfully");
-//                AlertDialog.Builder alert = new AlertDialog.Builder(uploads.this);
-//                alert.setMessage("Image path : "+real_uri); //display response in Alert dialog.
-//                alert.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-//                    @Override
-//                    public void onClick(DialogInterface dialog, int which) {
-//
-//                    }
-//                });
-//                alert.show();
+                AlertDialog.Builder alert = new AlertDialog.Builder(uploads.this);
+                alert.setMessage("Image path : "+real_uri); //display response in Alert dialog.
+                alert.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+
+                    }
+                });
+                alert.show();
 
             }
             catch (Exception e)
