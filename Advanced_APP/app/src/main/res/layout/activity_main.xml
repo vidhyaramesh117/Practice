@@ -48,4 +48,30 @@
         android:layout_marginBottom="15dp"
         android:background="#13b3ed"/>
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/q_r_code_btn"
+        android:text="Q R CODE"
+        android:textSize="15dp"
+        android:textColor="@color/black"
+        android:layout_marginTop="45dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="15dp"
+        android:background="#13b3ed"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/notification_btn"
+        android:text="NOTIFICATION"
+        android:textSize="15dp"
+        android:textColor="@color/black"
+        android:layout_marginTop="45dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="15dp"
+        android:background="#13b3ed"/>
+
 </LinearLayout>
