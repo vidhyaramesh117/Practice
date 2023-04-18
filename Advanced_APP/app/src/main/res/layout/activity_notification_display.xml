@@ -12,7 +12,15 @@
         android:layout_height="wrap_content"
         android:text="Notiction page"
         android:textSize="18dp"
-        android:layout_gravity="center"/>
+        android:layout_gravity="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv"
+        android:textSize="15dp" />
+
 
 
 </LinearLayout>
