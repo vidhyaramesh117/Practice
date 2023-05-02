@@ -14,29 +14,40 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.example.googlemaps.databinding.ActivityMapsBinding;
 
-public class MapsActivity extends AppCompatActivity implements OnMapReadyCallback
+public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
+{
+
 //FragmentActivity
- {
 
     private GoogleMap map;
 
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
 
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
 
         mapFragment.getMapAsync(this);
+
+    }
+
+    @Override
+    public void onMapReady(@NonNull GoogleMap googleMap) {
+
+        map = googleMap;
+        LatLng perumbavoor_latLng = new LatLng(10.1146, 76.4778);
+        MarkerOptions markerOptions = new MarkerOptions().position(perumbavoor_latLng).title("Perumbavoor");
+        map.addMarker(markerOptions);
+        map.moveCamera(CameraUpdateFactory.newLatLng(perumbavoor_latLng));
+        map.animateCamera(CameraUpdateFactory.newLatLngZoom(perumbavoor_latLng,16f));
     }
 
 
-     @Override
-     public void onMapReady(@NonNull GoogleMap googleMap)
-     {
-        map = googleMap;
-        LatLng latLng = new LatLng(10.1146, 76.4778)
-        MarkerOptions markerOptions = new MarkerOptions().position()
-        map.addMarker()
-     }
+//     @Override
+//     public void onMapReady(@NonNull GoogleMap googleMap)
+//     {
+//
+//     }
  }
